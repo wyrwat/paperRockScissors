@@ -44,4 +44,39 @@ h1 {
   text-align: center;
   color: #000;
 }
+
+.game-panel {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.game-panel .panel {
+  border: 2px solid #999;
+  width: 300px;
+  height: 400px;
+}
+
+.game-panel .player-panel {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.game-panel .player-panel .player-choice {
+  height: 75%;
+}
+
+.game-panel .player-panel .select {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 25px;
+}
+
+.game-panel .player-panel .select .far {
+  background-color: #B00700;
+  padding: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.prefixed.css.map */
