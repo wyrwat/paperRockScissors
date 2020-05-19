@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.rounds-number {
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  font-size: 35px;
+  color: #B00700;
+}
+
+.score-panel {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.score-panel .score-panel__element {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  color: #666;
+}
+
+.score-panel .score-panel__element .score {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+}
+/*# sourceMappingURL=style.prefixed.css.map */

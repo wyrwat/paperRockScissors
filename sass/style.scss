@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-wrapper {
+    display: flex;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.rounds-number {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-size: 35px;
+    color: #B00700;
+}
+
+.score-panel {
+    justify-content: space-around;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    margin-top: 20px;
+
+    .score-panel__element {
+        flex-direction: column;
+        color: #666;
+
+        .score {
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            color: #000;
+        }
+    }
+}
