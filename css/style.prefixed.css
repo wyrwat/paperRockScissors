@@ -119,6 +119,7 @@ h1 {
       align-self: center;
   width: 25%;
   height: 25%;
+  border-radius: 7px;
 }
 
 .game-panel .player-panel .select {
@@ -131,8 +132,14 @@ h1 {
 }
 
 .game-panel .player-panel .select img {
-  width: 25%;
+  width: 70px;
+  height: 70px;
+  border-radius: 7px;
   cursor: pointer;
+}
+
+.game-panel .player-panel .select img:hover {
+  opacity: 0.5;
 }
 
 .game-panel .player-panel .select .far {
@@ -217,5 +224,6 @@ h1 {
       align-self: center;
   width: 25%;
   height: 25%;
+  border-radius: 7px;
 }
 /*# sourceMappingURL=style.prefixed.css.map */

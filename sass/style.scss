@@ -109,6 +109,7 @@ h1 {
                 align-self: center;
                 width: 25%;
                 height: 25%;
+                border-radius: 7px;
             }
         }
 
@@ -119,8 +120,14 @@ h1 {
             margin-bottom: 20px;
 
             img {
-                width: 25%;
+                width: 70px;
+                height: 70px;
+                border-radius: 7px;
                 cursor: pointer;
+            }
+
+            img:hover {
+                opacity: 0.5;
             }
 
             .far {
@@ -201,6 +208,7 @@ h1 {
             align-self: center;
             width: 25%;
             height: 25%;
+            border-radius: 7px;
         }
     }
 
