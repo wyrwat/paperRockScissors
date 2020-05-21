@@ -18,32 +18,44 @@
     <div class="score-panel flex-wrapper">
         <div class="score-panel__element flex-wrapper">
             <p>you</p>
-            <p class="player__score score"> <span>0</span></p>
+            <p class="player__score element__counter playerScore"> <span>0</span></p>
         </div>
         <div class="score-panel__element flex-wrapper">
             <p>ties</p>
-            <p class="ties score"> <span>0</span></p>
+            <p class="ties element__counter"> <span>0</span></p>
         </div>
         <div class="score-panel__element flex-wrapper">
             <p>comp</p>
-            <p class="ai__score score"> <span>0</span></p>
+            <p class="ai__score element__counter aiScore"> <span>0</span></p>
         </div>
     </div>
     <div class="game-panel flex-wrapper">
         <div class="player-panel panel flex-wrapper">
-            <div class="player-choice" data-summary="your-choice">
-
+            <div class="player-choice flex-wrapper" data-summary="your-choice">
             </div>
             <div class="select flex-wrapper">
-                <i data-option="paper" class="far fa-hand-paper"></i>
-                <i data-option="rock" class="far fa-hand-rock"></i>
-                <i data-option="scissors" class="far fa-hand-scissors"></i>
+                <img data-option="paper" src="/images/paper.png" alt="paper">
+                <img data-option="rock" src="/images/rock.png" alt="rock">
+                <img data-option="scissors" src="/images/scissors.png" alt="scissors">
+
             </div>
         </div>
-        <div class="info-panel panel flex-wrapper">
-
+        <div class="wrapper flex-wrapper">
+            <div class="info-panel panel">
+                <h3>scoreboard</h3>
+                <div class="round-score flex-wrapper">
+                </div>
+            </div>
+            <div class="control-panel">
+                <button>restart</button>
+            </div>
         </div>
-        <div class="ai-panel panel"></div>
+
+        <div class="ai-panel panel ">
+            <div class="ai-choice flex-wrapper">
+
+            </div>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

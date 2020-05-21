@@ -4,21 +4,53 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: 'Amatic SC', cursive;
+}
+
 .flex-wrapper {
   display: -ms-flexbox;
   display: flex;
 }
 
 h1 {
-  font-family: 'Amatic SC', cursive;
   text-align: center;
   font-size: 60px;
   font-weight: 700;
   margin-top: 20px;
 }
 
+.fa-hand-paper {
+  transform: rotate(90deg);
+}
+
+.fa-hand-rock {
+  transform: rotate(90deg);
+}
+
+.fa-hand-scissors {
+  transform: scaleX(-1);
+}
+
+.score {
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 10px;
+  border-bottom: 1px solid #666;
+}
+
+.score p {
+  font-size: 17px;
+}
+
+.score p:nth-child(2) {
+  width: 80%;
+}
+
 .rounds-number {
-  font-family: 'Amatic SC', cursive;
   text-align: center;
   font-size: 35px;
   color: #B00700;
@@ -27,9 +59,9 @@ h1 {
 .score-panel {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-family: 'Amatic SC', cursive;
   font-size: 25px;
-  margin-top: 20px;
+  margin: 15px auto 0;
+  width: 80%;
 }
 
 .score-panel .score-panel__element {
@@ -38,7 +70,7 @@ h1 {
   color: #666;
 }
 
-.score-panel .score-panel__element .score {
+.score-panel .score-panel__element .element__counter {
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -48,10 +80,15 @@ h1 {
 .game-panel {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-top: 50px;
+  width: 80%;
+  margin: 30px auto;
 }
 
 .game-panel .panel {
   border: 2px solid #999;
+  background-color: #FCF3F1;
+  border-radius: 15px;
   width: 300px;
   height: 400px;
 }
@@ -62,13 +99,40 @@ h1 {
 }
 
 .game-panel .player-panel .player-choice {
-  height: 75%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-positive: 2;
+      flex-grow: 2;
+}
+
+.game-panel .player-panel .player-choice .far {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 95px;
+  color: black;
+}
+
+.game-panel .player-panel .player-choice img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 25%;
+  height: 25%;
 }
 
 .game-panel .player-panel .select {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
   font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.game-panel .player-panel .select img {
+  width: 25%;
+  cursor: pointer;
 }
 
 .game-panel .player-panel .select .far {
@@ -78,5 +142,80 @@ h1 {
   margin: 5px;
   color: #fff;
   cursor: pointer;
+}
+
+.game-panel .player-panel .select .far:hover {
+  background-color: #5c0703;
+}
+
+.wrapper {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.wrapper .info-panel {
+  height: 80%;
+}
+
+.wrapper .info-panel h3 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.wrapper .info-panel .round-score {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 250px;
+  overflow: hidden;
+}
+
+.wrapper .control-panel {
+  height: 20%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .control-panel button {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  width: 300px;
+  height: 80%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-radius: 15px;
+  border: 2px solid #999;
+  cursor: pointer;
+}
+
+.wrapper .control-panel button:hover {
+  background-color: #fff;
+}
+
+.ai-panel .ai-choice {
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 291px;
+}
+
+.ai-panel .ai-choice .far {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 95px;
+  color: black;
+}
+
+.ai-panel .ai-choice img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 25%;
+  height: 25%;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
