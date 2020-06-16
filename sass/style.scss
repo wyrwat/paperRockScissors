@@ -144,6 +144,28 @@ h1 {
             }
         }
     }
+
+
+    .ai-panel {
+
+        .ai-choice {
+            justify-content: center;
+            height: 291px;
+
+            .far {
+                align-self: center;
+                font-size: 95px;
+                color: black;
+            }
+
+            img {
+                align-self: center;
+                width: 25%;
+                height: 25%;
+                border-radius: 7px;
+            }
+        }
+    }
 }
 
 .wrapper {
@@ -192,25 +214,147 @@ h1 {
 }
 
 
-.ai-panel {
 
-    .ai-choice {
-        justify-content: center;
-        height: 291px;
+@media(min-width:770px) and (max-width: 1121px) {
 
-        .far {
-            align-self: center;
-            font-size: 95px;
-            color: black;
+    .game-panel {
+        // flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        width: 80%;
+        margin: 30px auto;
+
+        .panel {
+            border: 2px solid #999;
+            background-color: #FCF3F1;
+            border-radius: 15px;
+            // width: 300px;
+            height: 200px;
         }
 
-        img {
-            align-self: center;
-            width: 25%;
-            height: 25%;
-            border-radius: 7px;
+        .player-panel {
+            flex-direction: column;
+
+            .player-choice {
+                justify-content: center;
+                flex-grow: 2;
+
+                .far {
+                    align-self: center;
+                    font-size: 95px;
+                    color: black;
+
+                }
+
+                img {
+                    align-self: center;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 7px;
+                }
+            }
+
+            .select {
+                justify-content: space-around;
+                align-content: flex-end;
+                font-size: 25px;
+                margin-bottom: 20px;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 7px;
+                    cursor: pointer;
+                }
+
+                img:hover {
+                    opacity: 0.5;
+                }
+
+                .far {
+                    background-color: #B00700;
+                    padding: 25px;
+                    border-radius: 50%;
+                    margin: 5px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                .far:hover {
+                    background-color: rgb(92, 7, 3);
+                }
+            }
+        }
+
+
+        .ai-panel {
+
+
+            .ai-choice {
+                justify-content: center;
+                height: 200px;
+
+
+
+                img {
+                    align-self: center;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 7px;
+                }
+            }
         }
     }
 
 
+
+    .wrapper {
+        order: 1;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 200px;
+
+        .info-panel {
+            height: 80%;
+
+            h3 {
+                text-align: center;
+                margin: 10px 0;
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            .round-score {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                height: 95px;
+                overflow: hidden;
+            }
+        }
+
+        .control-panel {
+            height: 20%;
+            display: flex;
+
+            button {
+                font-family: 'Amatic SC', cursive;
+                font-size: 30px;
+                line-height: 30px;
+                width: 300px;
+                height: 80%;
+                // align-self: flex-end;
+                border-radius: 15px;
+                border: 2px solid #999;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #fff;
+            }
+        }
+    }
 }

@@ -155,6 +155,29 @@ h1 {
   background-color: #5c0703;
 }
 
+.game-panel .ai-panel .ai-choice {
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 291px;
+}
+
+.game-panel .ai-panel .ai-choice .far {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 95px;
+  color: black;
+}
+
+.game-panel .ai-panel .ai-choice img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 25%;
+  height: 25%;
+  border-radius: 7px;
+}
+
 .wrapper {
   -ms-flex-direction: column;
       flex-direction: column;
@@ -204,26 +227,134 @@ h1 {
   background-color: #fff;
 }
 
-.ai-panel .ai-choice {
-  -ms-flex-pack: center;
-      justify-content: center;
-  height: 291px;
-}
-
-.ai-panel .ai-choice .far {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-size: 95px;
-  color: black;
-}
-
-.ai-panel .ai-choice img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 25%;
-  height: 25%;
-  border-radius: 7px;
+@media (min-width: 770px) and (max-width: 1121px) {
+  .game-panel {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    margin-top: 50px;
+    width: 80%;
+    margin: 30px auto;
+  }
+  .game-panel .panel {
+    border: 2px solid #999;
+    background-color: #FCF3F1;
+    border-radius: 15px;
+    height: 200px;
+  }
+  .game-panel .player-panel {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .game-panel .player-panel .player-choice {
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-positive: 2;
+        flex-grow: 2;
+  }
+  .game-panel .player-panel .player-choice .far {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 95px;
+    color: black;
+  }
+  .game-panel .player-panel .player-choice img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+  }
+  .game-panel .player-panel .select {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .game-panel .player-panel .select img {
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .game-panel .player-panel .select img:hover {
+    opacity: 0.5;
+  }
+  .game-panel .player-panel .select .far {
+    background-color: #B00700;
+    padding: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .game-panel .player-panel .select .far:hover {
+    background-color: #5c0703;
+  }
+  .game-panel .ai-panel .ai-choice {
+    -ms-flex-pack: center;
+        justify-content: center;
+    height: 200px;
+  }
+  .game-panel .ai-panel .ai-choice img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+  }
+  .wrapper {
+    -ms-flex-order: 1;
+        order: 1;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-top: 20px;
+    height: 200px;
+  }
+  .wrapper .info-panel {
+    height: 80%;
+  }
+  .wrapper .info-panel h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .wrapper .info-panel .round-score {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 95px;
+    overflow: hidden;
+  }
+  .wrapper .control-panel {
+    height: 20%;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .wrapper .control-panel button {
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    line-height: 30px;
+    width: 300px;
+    height: 80%;
+    border-radius: 15px;
+    border: 2px solid #999;
+    cursor: pointer;
+  }
+  .wrapper .control-panel button:hover {
+    background-color: #fff;
+  }
 }
 /*# sourceMappingURL=style.prefixed.css.map */

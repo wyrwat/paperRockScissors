@@ -12,18 +12,7 @@ const game = {
 
 const hands = document.querySelectorAll(".select img");
 
-function userChoice() {
-  const showPlayerChoice = document.querySelector(".player-choice");
-  const playerChoice = this.cloneNode(true);
-  showPlayerChoice.innerHTML = "";
-  showPlayerChoice.appendChild(playerChoice);
-  game.playerHand = this.dataset.option;
 
-  gameSummary.roundsNumber += 1;
-  compChoice();
-  //   roundNumber();
-  roundScore();
-}
 
 function compChoice() {
   const aiHand = hands[Math.floor(Math.random() * 3)];
@@ -49,12 +38,45 @@ function roundScore() {
   roundScore.insertBefore(score, roundScore.firstChild);
 }
 
-// function roundNumber() {
-//   let counter = 0;
-//   for (let i = 0; i > 0; i++) {
-//     counter += i;
-//   }
-//   gameSummary.roundsNumber = counter;
-// }
+function checkResult(player, ai) {
+  if (player === ai) {
+    return 'draw';
+  } else if ((player === 'paper' && ai === 'rock') || (player === 'rock' && ai === 'scissors') || (player === 'scissors' && ai === 'paper')) {
+    return 'win';
+  } else return 'loss';
+}
+
+function publishResult(player, ai, result) {
+  gameSummary.numbers++;
+  document.querySelector('p.rounds-number span').textContent = gameSummary.roundsNumber;
+  console.log(result);
+  if (result === 'win') {
+    gameSummary.playerScore++;
+    document.querySelector('p.player__score span').textContent = gameSummary.playerScore;
+  } else if (result === 'loss') {
+    gameSummary.aiScore++;
+    document.querySelector('p.ai__score span').textContent = gameSummary.aiScore;
+  } else {
+    gameSummary.ties++;
+    document.querySelector('p.ties span').textContent = gameSummary.ties;
+  }
+}
+
+function userChoice() {
+  const showPlayerChoice = document.querySelector(".player-choice");
+  const playerChoice = this.cloneNode(true);
+  showPlayerChoice.innerHTML = "";
+  showPlayerChoice.appendChild(playerChoice);
+  game.playerHand = this.dataset.option;
+  gameSummary.roundsNumber += 1;
+
+  compChoice();
+  roundScore();
+
+  const gameResult = checkResult(game.playerHand, game.aiHand);
+  publishResult(game.playerHand, game.aiHand, gameResult)
+}
+
+
 
 hands.forEach((item) => item.addEventListener("click", userChoice));
