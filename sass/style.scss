@@ -34,7 +34,6 @@ h1 {
 .score {
     display: flex;
     width: 35%;
-    // text-align: center;
     justify-content: space-between;
     margin-top: 10px;
     border-bottom: 1px solid #666;
@@ -47,10 +46,6 @@ h1 {
         width: 80%;
     }
 }
-
-// .score:nth-child(1) {
-//     background-color: #999;
-// }
 
 .rounds-number {
     text-align: center;
@@ -102,7 +97,6 @@ h1 {
                 align-self: center;
                 font-size: 95px;
                 color: black;
-
             }
 
             img {
@@ -145,7 +139,6 @@ h1 {
         }
     }
 
-
     .ai-panel {
 
         .ai-choice {
@@ -170,7 +163,6 @@ h1 {
 
 .wrapper {
     flex-direction: column;
-    // height: 100%;
 
     .info-panel {
         height: 80%;
@@ -185,7 +177,6 @@ h1 {
         .round-score {
             flex-wrap: nowrap;
             flex-direction: column;
-            // justify-content: center;
             align-items: center;
             height: 250px;
             overflow: hidden;
@@ -210,150 +201,54 @@ h1 {
         button:hover {
             background-color: #fff;
         }
+
+        button:focus {
+            outline: none;
+        }
     }
 }
 
-
-
-@media(min-width:770px) and (max-width: 1121px) {
-
+@media(min-width:772px) and (max-width: 1121px) {
     .game-panel {
-        // flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 50px;
-        width: 80%;
-        margin: 30px auto;
 
         .panel {
-            border: 2px solid #999;
-            background-color: #FCF3F1;
-            border-radius: 15px;
-            // width: 300px;
             height: 200px;
         }
 
         .player-panel {
-            flex-direction: column;
-
             .player-choice {
-                justify-content: center;
-                flex-grow: 2;
-
-                .far {
-                    align-self: center;
-                    font-size: 95px;
-                    color: black;
-
-                }
-
                 img {
                     align-self: center;
                     width: 70px;
                     height: 70px;
                     border-radius: 7px;
-                }
-            }
-
-            .select {
-                justify-content: space-around;
-                align-content: flex-end;
-                font-size: 25px;
-                margin-bottom: 20px;
-
-                img {
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 7px;
-                    cursor: pointer;
-                }
-
-                img:hover {
-                    opacity: 0.5;
-                }
-
-                .far {
-                    background-color: #B00700;
-                    padding: 25px;
-                    border-radius: 50%;
-                    margin: 5px;
-                    color: #fff;
-                    cursor: pointer;
-                }
-
-                .far:hover {
-                    background-color: rgb(92, 7, 3);
                 }
             }
         }
 
-
         .ai-panel {
-
-
             .ai-choice {
-                justify-content: center;
                 height: 200px;
 
-
-
                 img {
-                    align-self: center;
                     width: 70px;
                     height: 70px;
-                    border-radius: 7px;
                 }
             }
         }
     }
 
-
-
     .wrapper {
         order: 1;
-        flex-direction: column;
         margin-top: 20px;
         height: 200px;
 
         .info-panel {
-            height: 80%;
-
-            h3 {
-                text-align: center;
-                margin: 10px 0;
-                font-size: 30px;
-                font-weight: 700;
-            }
-
             .round-score {
-                flex-wrap: nowrap;
-                flex-direction: column;
-                // justify-content: center;
-                align-items: center;
                 height: 95px;
-                overflow: hidden;
-            }
-        }
-
-        .control-panel {
-            height: 20%;
-            display: flex;
-
-            button {
-                font-family: 'Amatic SC', cursive;
-                font-size: 30px;
-                line-height: 30px;
-                width: 300px;
-                height: 80%;
-                // align-self: flex-end;
-                border-radius: 15px;
-                border: 2px solid #999;
-                cursor: pointer;
-            }
-
-            button:hover {
-                background-color: #fff;
             }
         }
     }
