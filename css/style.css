@@ -190,7 +190,7 @@ h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
   width: 300px;
-  height: 80%;
+  height: 60px;
   align-self: flex-end;
   border-radius: 15px;
   border: 2px solid #999;
@@ -234,6 +234,9 @@ h1 {
   }
   .wrapper .info-panel .round-score {
     height: 95px;
+  }
+  .control-panel {
+    margin-top: 30px;
   }
 }
 
