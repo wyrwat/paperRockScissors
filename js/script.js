@@ -76,17 +76,10 @@ function userChoice() {
 }
 
 function resetGame() {
-  let gameSummary = {
-    roundsNumber: 0,
-    playerScore: 0,
-    aiScore: 0,
-    ties: 0,
-  };
-
-  let game = {
-    playerHand: "",
-    aiHand: "",
-  };
+  gameSummary.roundsNumber = 0;
+  gameSummary.playerScore = 0;
+  gameSummary.aiScore = 0;
+  gameSummary.ties = 0;
 
   document.querySelector("p.rounds-number span").textContent = gameSummary.roundsNumber;
   document.querySelector("p.player__score span").textContent = gameSummary.playerScore;
