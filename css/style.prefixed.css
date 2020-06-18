@@ -117,8 +117,8 @@ h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 25%;
-  height: 25%;
+  width: 70px;
+  height: 70px;
   border-radius: 7px;
 }
 
@@ -173,28 +173,28 @@ h1 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  width: 25%;
-  height: 25%;
+  width: 70px;
+  height: 70px;
   border-radius: 7px;
 }
 
-.wrapper {
+.info-wrapper {
   -ms-flex-direction: column;
       flex-direction: column;
 }
 
-.wrapper .info-panel {
+.info-wrapper .info-panel {
   height: 80%;
 }
 
-.wrapper .info-panel h3 {
+.info-wrapper .info-panel h3 {
   text-align: center;
   margin: 10px 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-.wrapper .info-panel .round-score {
+.info-wrapper .info-panel .round-score {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-flex-direction: column;
@@ -205,13 +205,13 @@ h1 {
   overflow: hidden;
 }
 
-.wrapper .control-panel {
+.info-wrapper .control-panel {
   height: 20%;
   display: -ms-flexbox;
   display: flex;
 }
 
-.wrapper .control-panel button {
+.info-wrapper .control-panel button {
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
   width: 300px;
@@ -223,11 +223,11 @@ h1 {
   cursor: pointer;
 }
 
-.wrapper .control-panel button:hover {
+.info-wrapper .control-panel button:hover {
   background-color: #fff;
 }
 
-.wrapper .control-panel button:focus {
+.info-wrapper .control-panel button:focus {
   outline: none;
 }
 
@@ -258,17 +258,36 @@ h1 {
     width: 70px;
     height: 70px;
   }
-  .wrapper {
+  .info-wrapper {
     -ms-flex-order: 1;
         order: 1;
     margin-top: 20px;
     height: 200px;
   }
-  .wrapper .info-panel .round-score {
+  .info-wrapper .info-panel .round-score {
     height: 95px;
   }
   .control-panel {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 771px) {
+  .game-panel {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .game-panel .panel {
+    width: 300px;
+    height: 250px;
+  }
+  .info-wrapper {
+    -ms-flex-order: 1;
+        order: 1;
   }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
